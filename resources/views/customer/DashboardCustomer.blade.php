@@ -24,7 +24,7 @@
               <a href="/BookingLog" class="text-white mb-0 h1 text-lg">Booking Log</i></a>
             </div>
             <div class="col-1">
-              <a href="/profileUser"><i class="fas fa-user-circle text-white mb-0 h1 text-lg">{{--{{Auth::user() -> nama_user ?? ''}}--}} Profile</i></a>
+              <a href="/profileUser"><i class="fas fa-user-circle text-white mb-0 h1 text-lg">{{Auth::user() -> nama_user ?? ''}} Profile</i></a>
             </div>
             <div class="col-1">
               <a href="/logout" class="btn btn-danger m-1">Logout</a>

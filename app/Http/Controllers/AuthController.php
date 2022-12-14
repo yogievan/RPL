@@ -21,7 +21,7 @@ class AuthController extends Controller
             'email' => ['required'],
             'password' => ['required']
         ]);
-        Auth::login($user);
+        Auth::loginCustomer($user);
         return redirect('/DashboardCustomer');
     }
 
@@ -42,14 +42,29 @@ class AuthController extends Controller
             'username' => ['required'],
             'password' => ['required']
         ]);
-        Auth::login($user);
-        return redirect('/DashboardCustomer');
+        Auth::loginAdmin($user);
+        return redirect('/DashboardManager');
     }
     
     public function adminlogout()
     {
         Auth::logout();
         return redirect('/admin/Login');
+    }
+
+    public function managersignin()
+    {
+        return view('ManagerSign-in');
+    }
+    public function managerceklogin(Request $request)
+    {
+        $user = User::where('username', $request->email)->where('password', md5($request->password))->first();
+        $validatedData = $request->validate([
+            'username' => ['required'],
+            'password' => ['required']
+        ]);
+        Auth::login($user);
+        return redirect('/DashboardManager');
     }
 
     public function signup()

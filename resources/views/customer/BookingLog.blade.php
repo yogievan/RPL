@@ -61,7 +61,7 @@
                                 <td>{{$tp -> total_bayar}}</td>
                                 <td>{{$tp -> valiadi}}</td>
                                 <td>
-                                    <a href="#" class="btn btn-outline-primary">
+                                    <a href="/BookingLog/Shuttle/{{$tp -> id}}" class="btn btn-outline-primary">
                                         View
                                     </a>
                                 </td>
@@ -106,7 +106,7 @@
                                 <td>{{$ti -> total_bayar}}</td>
                                 <td>{{$ti -> validasi}}</td>
                                 <td>
-                                    <a href="#" class="btn btn-outline-primary">
+                                    <a href="/BookingLog/Sewa/{{$ti -> id}}" class="btn btn-outline-primary">
                                         View
                                     </a>
                                 </td>

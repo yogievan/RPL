@@ -94,4 +94,16 @@ class CustomerController extends Controller
         $instansi = Instansi::orderBy('id', 'DESC')->paginate(10);
         return view('customer.BookingLog', ['pribadi' => $pribadi,'instansi' => $instansi]);
     }
+
+    public function viewbookingLogShuttle($id)
+    {
+        $pribadi = Pribadi::find($id);
+        return view('customer.viewBookingLogPribadi', ['pribadi' => $pribadi]);
+    }
+
+    public function viewbookingLogSewa($id)
+    {
+        $instansi = Instansi::find($id);
+        return view('customer.viewBookingLogInstansi', ['instansi' => $instansi]);
+    }
 }

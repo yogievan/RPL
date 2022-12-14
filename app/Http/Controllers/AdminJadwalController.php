@@ -22,7 +22,7 @@ class AdminJadwalController extends Controller
 
     public function addDataJadwal()
     {
-        $bus = Bus::orderBy('id', 'ASC')->paginate(100000000);
+        $bus = Bus::orderBy('id', 'ASC')->where('id_sifat','2')->paginate(100000000);
         $shuttle = Shuttle::orderBy('id', 'ASC')->paginate(100000000);
         return view('admin.addJadwal', ['cek' => 'tabelJadwal'], ['bus' => $bus, 'shuttle'=>$shuttle]);
     }

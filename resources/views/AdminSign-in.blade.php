@@ -23,7 +23,7 @@
                   </div>
                   <div class="card-body">
                     <form action="/admin/ceklogin" method="POST">
-                      @csrf
+                      @csrf 
                       <div class="mb-3">
                         <input type="text" class="form-control form-control-lg" placeholder="Username" name="username" required autofocus>
                       </div>

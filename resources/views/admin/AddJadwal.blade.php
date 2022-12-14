@@ -46,7 +46,7 @@
             <div class="col mt-3">
               <label class="text-white text-lg">Shuttle Mulai</label>
               <select id="inputBerangkat" class="form-control" name="shuttle_mulai">
-                <option selected value="Halte Prambanan">Halte Prambanan</option>
+                <option selected value=""></option>
                 @foreach ($shuttle as $no => $sh)
                   <option value="{{$sh -> nama_shuttle}}">{{$sh -> nama_shuttle}}</option>
                 @endforeach
@@ -56,7 +56,7 @@
             <div class="col mt-3">
               <label class="text-white text-lg">Shuttle Tujuan</label>
               <select id="inputBerangkat" class="form-control" name="shuttle_tujuan">
-                <option selected value="Halte Prambanan">Halte Prambanan</option>
+                <option selected value=""></option>
                 @foreach ($shuttle as $no => $sh)
                   <option value="{{$sh -> nama_shuttle}}">{{$sh -> nama_shuttle}}</option>
                 @endforeach
